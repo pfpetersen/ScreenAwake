@@ -46,8 +46,6 @@ console.clear();
 const statusElem = document.querySelector('#status p');
 // toggle button
 const wakeButton = document.querySelector('[data-status]');
-// checkbox
- document.addEventListener('visibilitychange', handleVisibilityChange);
 
 // change button and status if wakelock becomes aquired or is released
 const changeUI = (status = 'acquired') => {
@@ -117,7 +115,7 @@ requestWakeLock()
       requestWakeLock();
     }
   }
-
+ document.addEventListener('visibilitychange', handleVisibilityChange);
 
      
 
